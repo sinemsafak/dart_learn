@@ -19,3 +19,33 @@ Var anahtar kelimesi veriable anlamına gelir ve veri türünü belirtmek
 istemiyorsak kullanırız. 
 Atanan ifadeye göre otomatik olarak türü belirtilir. ,
 */
+
+void main(List<String> args) {
+  int yas= 22;
+  double ortalama= 5.6;
+  num yil= 1988; //num ifadesi hem double hem de integer değerleri kapsar 
+ 
+  String ad="Sinem"; 
+  print(ad);
+
+  print(yas);
+  print(yil);
+  print(ortalama);
+
+  print(ad +"'in sevidiği renkler");
+  print(ad+ "'in yaşı");
+
+  bool kizMi= true;
+  bool issizMi= false;
+
+  print(issizMi);
+  print(kizMi);
+
+  var okul = "ege";
+  var okulNumarasi = 742; 
+  var kedisiVarMi = true;
+
+  print(kedisiVarMi);
+  print(okulNumarasi);
+  print(okul);
+}
