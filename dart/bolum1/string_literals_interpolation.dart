@@ -11,7 +11,7 @@ Ayrıca interpolation diğer veri türleri için de geçerlidir.
  */
 void main(List<String> args) {
   /* "sinem";  dart bize ifadeleri böyle yazma imkanı sunuyor. fakat bu ifadeleri yazdırmak  
-  56;          istediğimizde bunlara ulaşamayız. bu tek satırlı ifadelere literal denir. 
+  56;          istediğimizde bunlara ulaşamayız. bu tek satırlı ifadelere "literal" denir. 
   true; */
 
   String isim = "Emre";
