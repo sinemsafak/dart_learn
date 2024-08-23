@@ -8,7 +8,7 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "dart/bolum1/string_literals_interpolation.dart"
+            "program": "dart/bolum2/if_else_kullanimi.dart"
         }
     ]
 }
