@@ -25,5 +25,10 @@ main(List<String> args) {
   String? soyad = "şafak";
   String mesaj;
   mesaj = ad ?? soyad; // ?? değilse anlamı verir. 
+
+  /* String? ad ="sinem";
+  String? soyad= null;
+  String? mesaj;
+  mesaj=ad??soyad; */
   print("Merhaba $mesaj");
 }
