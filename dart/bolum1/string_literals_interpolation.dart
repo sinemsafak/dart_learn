@@ -19,7 +19,7 @@ void main(List<String> args) {
   var kurs = "Dart'ın kullanımı";
   String kursTanimi = "Dart'ı ve Flutter'ı öğreneceğiz";
 
-
+  print("$kurs: $kursTanimi");
   print(isim + " " + soyIsim);
   print("$isim $soyIsim");
   print("soyadım olan $soyIsim'da bulunan karakter sayısı:" + soyIsim.length.toString());
