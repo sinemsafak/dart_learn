@@ -36,4 +36,27 @@ void main(List<String> args) {
     print("Hatalı bir değer girdiniz.");
   }
   }
+
+  int sayi=6;
+  int bolum = (sayi / 10).toInt();
+
+  switch(bolum)
+  {
+    case 3:
+    print("Sayı 30'dan büyüktür.");
+    break;
+
+    case 2:
+    print("Sayı 20'den büyüktür.");
+    break;
+
+    case 1:
+    print("Sayı 10'dan büyüktür.");
+    break;
+
+    case 0:
+    print("Sayı 10'dan küçüktür.");
+    break;
+    
+  }
 }
