@@ -38,7 +38,7 @@ void main(List<String> args) {
   }
 
   int sayi=6;
-  int bolum = (sayi / 10).toInt();
+  int bolum = sayi ~/ 10;
 
   switch(bolum)
   {
