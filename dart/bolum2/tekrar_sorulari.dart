@@ -28,4 +28,6 @@ void main(List<String> args) {
     print("kenarları verieln üçgen ikiz kenarlıdır.");
   }
 
+  //CEVAP3
+  
 }
