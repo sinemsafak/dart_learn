@@ -29,5 +29,18 @@ void main(List<String> args) {
   }
 
   //CEVAP3
+  double vizeNotu=35;
+  double finalNotu=72;
+  double hesapNot=0;
+
+  hesapNot=((vizeNotu*40)+(finalNotu*60))/100;
+
+  if(hesapNot>=50||hesapNot<=100){
+    print("Tebrikler dersten geçtiniz. Notunuz: $hesapNot");
+  }else{
+    print("Üzgünüz, dersten kaldınız. Notunuz:  $hesapNot");
+  }
+
+  //CEVAP4
   
 }
