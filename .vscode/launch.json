@@ -8,7 +8,7 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "dart/bolum2/tekrar_sorulari.dart"
+            "program": "${file}"
         }
     ]
 }
