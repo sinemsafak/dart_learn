@@ -7,12 +7,32 @@ Methodlar parametre alabilir veya herhangi bir parametreye sahip olmayabilir. Me
 */
 
 void main(List<String> args) {
-  
+  cevreyiHesapla();
+  int sonuc = alanHesapla(5, 10);
+  print("alan işleminin sonucu: $sonuc");
+
+  int hacim = hacimHesapla(8, 9, 10);
+  print("Hacim değeri: $hacim");
 }
 
-cevreyiHesapla(){
-  int en=5;
-  int boy=10;
-  int cevre=(en+boy)*2;
-  print("Çevre $cevre");
+//parametresiz fonksiyon
+//burada geriye dönüş fonksiyonu olmadığı için return kullanılmaz.
+//geriye değer döndürmediği için void kullanıyoruz
+void cevreyiHesapla() {
+  int en = 5;
+  int boy = 10;
+  int cevre = (en + boy) * 2;
+  print("Çevre değeri: $cevre");
+}
+
+//parametre alan fonksiyon
+//geriye değer döndürdüğü için string, int gibi veri tiplerini kullanıyoruz
+int alanHesapla(int kenar1, int kenar2) {
+  /*  int alan=kenar1*kenar2;
+  print("Alan değeri: $alan"); */
+  return kenar1 * kenar2; //return foknsiyonun çağrılığı yere geri döndürür.
+}
+
+int hacimHesapla(int sayi1, int sayi2, int sayi3) {
+  return sayi1 * sayi2 * sayi3;
 }
