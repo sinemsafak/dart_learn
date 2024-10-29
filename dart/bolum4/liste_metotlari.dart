@@ -14,7 +14,20 @@ void main(List<String> args) {
   print(sayilar);
   sayilar.remove(3);  //listenin içinde silinmesi istenen rakamdan kaç tane olursa olsun remove komutu ilk gördüğünü tek siler diğerleirne karışmaz.
   print(sayilar);
-  sayilar.removeAt(1); //1. indexteki sayıyı siler. 
+  sayilar.removeAt(1); //verilen indexteki sayıyı siler. 
   print(sayilar);
-  
+
+  //sayilar.clear(); //bütün listeyi temizler
+  if(sayilar.contains(9)){ //listede belirtilen eleman var mı onu bulmamıza yarar.
+    print("Listede 9 var");
+  }else{
+    print("Listede 9 yok");
+  }
+
+  print(sayilar.elementAt(4)); //belirlenen indexteki sayıyı getirir. 
+  print(sayilar.indexOf(11)); //belirlenen değerin index numaraını yazdırır. 
+  sayilar.shuffle(); //rastgele olarak liste elemanlarının yerini değiştirir. Liste üzerinde direk etkilidir. anlık değildir. 
+  print(sayilar); 
+
+  //diğer methotlar için flutter.dev adresine flutter list yazılınca açıklamasıyla beraber hangi metodun ne işe yaradığı incelenebilinir.
 }
