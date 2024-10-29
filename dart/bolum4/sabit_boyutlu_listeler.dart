@@ -13,6 +13,8 @@ void main(List<String> args) {
   sayilar[0]=4; //index numaralrı 0 dan başlar.
   sayilar[1]=1;
   sayilar[2]=9;
+
+ // sabit boyutlu listelerde "sayilar.remove(1);"" bu method çalışmaz. remove, add, ... gibi
   print("Dizinin uzunluğu: "+ (sayilar.length).toString());
   //bu liste yapısının eksi tarafı dizinin uzunluğunun değiştirilemez olmasıdır. 
   print(sayilar);
