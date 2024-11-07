@@ -2,10 +2,11 @@
 
 */
 
+import 'dart:io';
 import 'dart:math';
 
 void main(List<String> args) {
-  //1) Şehirleri tutan bir liste oluşturun, 4 tane il ekleyip sırasıyla ekrana yazdırın.
+ ///1) Şehirleri tutan bir liste oluşturun, 4 tane il ekleyip sırasıyla ekrana yazdırın.
   List<String> sehirler = List.filled(4, '');
   sehirler[0] = 'Bursa';
   sehirler[1] = 'Ankara';
@@ -80,6 +81,31 @@ void main(List<String> args) {
     sonSetYapisi.add(gecici*gecici);
   }
   print(sonListe);
-  print(sonSetYapisi);
+  print(sonSetYapisi); 
   //5) Kullanıcıdan aldığınız integer pozitif sayıları bir listede tutun, kullanıcı 0 değerini girdiğinde girilen sayıların ortalamasını ekrana yazdırın.
+  int girilenNot=0;
+  List<int> girilenNotlar = <int> [];
+  //List<int> girilenNotlar2=List.empty(growable: true);
+  do{
+    print("Lütfen not değeri giriniz, çıkış için -1'i tuşlayınız");
+    girilenNot=int.parse(stdin.readLineSync()!);
+    if(girilenNot != -1){
+        girilenNotlar.add(girilenNot);
+    }
+  }while(girilenNot!= -1);
+
+  print(" kaç tane not girildi ${girilenNotlar.length}");
+  double ortalama= listeninOrtalamasiniBul(girilenNotlar);
+   print("Notların ortalaması: $ortalama");
 }
+
+double listeninOrtalamasiniBul(List<int> liste) {
+    int toplam=0;
+    for(int i=0;i<liste.length;i++){
+        toplam=toplam+liste[i];
+    }
+    return toplam/liste.length;
+}
+
+
+
