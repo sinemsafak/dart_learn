@@ -2,6 +2,8 @@
 
 */
 
+import 'dart:math';
+
 void main(List<String> args) {
   //1) Şehirleri tutan bir liste oluşturun, 4 tane il ekleyip sırasıyla ekrana yazdırın.
   List<String> sehirler = List.filled(4, '');
@@ -43,23 +45,41 @@ void main(List<String> args) {
   iller.add(eklenecek_Sehir2);
   iller.add(eklenecek_Sehir3);
 
-  iller.add({  //böyle bir tanım yaptığımızda artık bunu kullanamayız bu ifade burada oluşturulur ve kullanılır. 
-    'il_adi':'izmir',
-    'ilce_sayisi':9,
-    'plaka_kodu':35
+  iller.add({
+    //böyle bir tanım yaptığımızda artık bunu kullanamayız bu ifade burada oluşturulur ve kullanılır.
+    'il_adi': 'izmir',
+    'ilce_sayisi': 9,
+    'plaka_kodu': 35
   });
 
   //print(iller[0]['il_adi']);
   //print(iller[0]['ilce_sayisi']);
   //print(iller[2]['ilce_sayisi']);
 
-  for(int i=0; i<iller.length; i++){
-    var oankiSehirMapYapisi=iller[i];
-    print("Listenin ${i+1} elemanında bulunan şehir adı: ${oankiSehirMapYapisi['il_adi']} ilçe sayısı: ${oankiSehirMapYapisi['ilce_sayisi']} plaka kodu: ${oankiSehirMapYapisi['plaka_kodu']}");
+  for (int i = 0; i < iller.length; i++) {
+    var oankiSehirMapYapisi = iller[i];
+    print(
+        "Listenin ${i + 1} elemanında bulunan şehir adı: ${oankiSehirMapYapisi['il_adi']} ilçe sayısı: ${oankiSehirMapYapisi['ilce_sayisi']} plaka kodu: ${oankiSehirMapYapisi['plaka_kodu']}");
   }
 
-
-
   //4)5 elemanlı iki farklı liste oluşturun. Elemanlar 0-50'ye rastgele şekilde oluşturulsun. Bu elemanları tek bir listeye aktarın. Oluşan son listenin elemanlarının karelerini tutan set yapısı oluşturup ekrana yazdırın.
+  List<int> liste1 = List.filled(5, 0);
+  var liste2 = List<int>.filled(5, 0);
+  List<int> sonListe=<int>[];
+  var sonSetYapisi =<int>{};
+
+  // liste1[0]=Random().nextInt(50);
+  for (int i = 0; i < 5; i++) {
+    liste1[i] = Random().nextInt(50);
+    liste2[i] = Random().nextInt(50);
+  }
+  sonListe=[...liste1, ...liste2];
+  print(sonListe);
+
+  for(int gecici in sonListe){
+    sonSetYapisi.add(gecici*gecici);
+  }
+  print(sonListe);
+  print(sonSetYapisi);
   //5) Kullanıcıdan aldığınız integer pozitif sayıları bir listede tutun, kullanıcı 0 değerini girdiğinde girilen sayıların ortalamasını ekrana yazdırın.
 }
