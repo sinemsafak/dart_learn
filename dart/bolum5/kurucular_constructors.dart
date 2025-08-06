@@ -36,7 +36,7 @@ main(List<String>arg){
   reno.bilgileriSoyle();
 
   var bmw = Araba(2021, "BMW", true);
-  bmw.bilgileriSoyle();
+  bmw.yasHesapla();
 }
 
 class Araba{
@@ -50,11 +50,29 @@ class Araba{
     print("kurucu metot tetklendi");
   } */
 
-  Araba(int modelYili, String marka, bool otomatikMi){
+  Araba(this.modelYili, this.marka, this.otomatikMi){
     print("kurucu metot tetklendi");
+
   }
+ /*  Araba(int yil, String m, bool o){
+    print("kurucu metot tetklendi");
+    
+    /* this.modelYili= modelYili;
+    this.marka= marka;
+    this.otomatikMi=otomatikMi; */ 
+
+   /*  modelYili= yil;
+    marka=m;
+    otomatikMi=o; */
+
+
+  } */
 
   void bilgileriSoyle(){
     print("arabanın model yili ${modelYili}, markası: ${marka} otomatik mi: ${otomatikMi}");
+  }
+
+  void yasHesapla(){
+    print("Arabanın yaşı ${2021 -  modelYili!}"); // ! işareti ile ifadenin null değilmiş gibi davranmasını sağlıyoruz. 
   }
 }
