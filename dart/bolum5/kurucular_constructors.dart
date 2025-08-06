@@ -37,6 +37,11 @@ main(List<String>arg){
 
   var bmw = Araba(2021, "BMW", true);
   bmw.yasHesapla();
+
+  var citroen = Araba.markasizKurucuMetod(false, 2020);
+  Araba suzuki=Araba.modelYiliOlmayanKurucuMetod(true, "Suzuki");
+
+  suzuki.yasHesapla();
 }
 
 class Araba{
@@ -54,6 +59,14 @@ class Araba{
     print("kurucu metot tetklendi");
 
   }
+
+//isimlendirilmiş kurucu metottan istediğimiz kadar yapabiliriz.
+  Araba.markasizKurucuMetod(this.otomatikMi, this.modelYili);
+  Araba.modelYiliOlmayanKurucuMetod(bool otomatikMi, String marka){
+    this.otomatikMi=otomatikMi;
+    this.marka=marka;
+  }
+
  /*  Araba(int yil, String m, bool o){
     print("kurucu metot tetklendi");
     
@@ -73,6 +86,8 @@ class Araba{
   }
 
   void yasHesapla(){
+    if(modelYili != null)
     print("Arabanın yaşı ${2021 -  modelYili!}"); // ! işareti ile ifadenin null değilmiş gibi davranmasını sağlıyoruz. 
+    else print("model yılı olmadığından yaş hesaplanamadı");
   }
 }
