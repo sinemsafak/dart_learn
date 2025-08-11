@@ -22,49 +22,83 @@ Method overriding : üst sınıftaki değişken veya methodların alt sınıf ta
  */
 
 void main(List<String> args) {
-  User user1 =User();
+/*   User user1 =User();
   user1.girisYap();
   NormalUser normal1 = NormalUser();
   normal1.davetEt();
-  normal1.girisYap();
+  normal1.girisYap(); */
+  User user1 = User();
+  var user2 = NormalUser();
+  SadeceOkuyabilenNormalUser user3 = SadeceOkuyabilenNormalUser();
+  AdminUser user4 = AdminUser();
 
-  SadeceOkuyabilenNormalUser user=  SadeceOkuyabilenNormalUser();
+  User user5 = AdminUser();
+  User user6 = SadeceOkuyabilenNormalUser(); //upcasting yukarı çevrim
+
+  List<NormalUser> tumNormalUserlar = [];
+  List<AdminUser> tumAdminUserlar = [];
+
+  List<User> tumUserlar = [];
+  tumUserlar.add(user1);
+  tumUserlar.add(user2);
+  tumUserlar.add(user3);
+
+  test(user1);
+  test(user2); 
+  test(user3);
+  test(user4);
+
+  SadeceOkuyabilenNormalUser user = SadeceOkuyabilenNormalUser();
   //user.davetEt();
   user.girisYap();
   // user.adiniSoyle();
 }
-class User{   //ana sınıf
-String email="";
-  String password="";
 
-  void girisYap(){
+void test(User kullanici) {
+  kullanici.girisYap(); // polimorfizm (çok biçimlilik) burada tek bir veri türü yolluyoruz (user gibi) ama burada yollanan değere göre farklı farklı türlere gidiyorr (normal user, user, sadece okuyabilen user gibi)
+  
+}
+
+class User {
+  //ana sınıf
+  String email = "";
+  String password = "";
+
+  void girisYap() {
     print("parent user giriş yaptı");
   }
 }
-class NormalUser extends User{    //çocuk sınıf
-  void davetEt(){
+
+class NormalUser extends User {
+  //çocuk sınıf
+  void davetEt() {
     print("normal user arkadaşlarını davet etti");
   }
 
   @override
   void girisYap() {
-   print("normal user giriş yaptı");
+    print("normal user giriş yaptı");
   }
 }
 
-class SadeceOkuyabilenNormalUser extends NormalUser{
-  void adiniSoyle(){
+class SadeceOkuyabilenNormalUser extends NormalUser {
+  void adiniSoyle() {
     print("ben sadece okuyabilirim");
   }
+
   @override
   void girisYap() {
-  print("sadece okuyabilen normal user giriş yaptı");
+    print("sadece okuyabilen normal user giriş yaptı");
   }
 }
 
-class AdminUser extends User{   //çocuk sınıf
-
-  void toplamUserSayisi(){
+class AdminUser extends User {
+  //çocuk sınıf
+@override
+  void girisYap() {
+    print("admin user giriş yaptı");
+  }
+  void toplamUserSayisi() {
     print("toplam kullanıcı sayısı 20");
   }
 }
